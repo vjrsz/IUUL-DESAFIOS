@@ -1,5 +1,8 @@
-import route from "./config/Route.js";
+import Route from "./config/Route.js";
+import RepositoriesSeed from "./config/RepositoriesSeed.js";
 
-let endpoint = route.get("menu@index")
+let redirect = Route.redirect("menu@index")
 
-while(endpoint){ endpoint = endpoint(); console.log("\n") }
+RepositoriesSeed.seed()
+
+while(redirect){ redirect = redirect.endpoint(redirect.param); console.log("\n"); }

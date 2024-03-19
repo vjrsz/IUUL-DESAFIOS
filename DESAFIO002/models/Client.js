@@ -1,12 +1,18 @@
-class Client {
-    _cpf
+import DateHelper from "../helpers/DateHelper.js";
+
+export class Client{
     _name
+    _cpf
     _birthdate
 
-    constructor(cpf, name, birthdate) {
-        this._cpf = cpf;
+    constructor(name, cpf, birthdate) {
         this._name = name;
+        this._cpf = cpf;
         this._birthdate = birthdate;
+    }
+
+    get age(){
+        return DateHelper.calculateDifferenceYears(this.birthdate).toString()
     }
 
     get cpf() {

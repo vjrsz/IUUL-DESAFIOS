@@ -1,4 +1,4 @@
-class Scheduling {
+export default class {
     _client
     _date
     _hourInit

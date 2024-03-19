@@ -15,9 +15,14 @@ export function readInt(ask){
 export function readString(ask){
     return prompt(ask);
 }
-export function askToUserWhile(ask, callbackValidate){
+export function askToUserWhile(ask, callbackValidate, read = readString){
     while(true){
-        let value = readString(ask);
-        if(callbackValidate(value)) return value;
+        let value = read(ask);
+        try{
+            callbackValidate(value)
+            return value;
+        } catch (e) {
+            println(`\n${e.message}\n`)
+        }
     }
 }

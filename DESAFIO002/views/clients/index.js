@@ -1,4 +1,4 @@
-import {println, readInt} from "./../view.js";
+import {askToUserWhile, println, readInt} from "./../view.js";
 import IntegerValidate from "../../validations/IntegerValidate.js";
 
 export function index(){
@@ -9,16 +9,11 @@ export function index(){
     println("4-Listar pacientes (ordenado por nome)")
     println("5-Voltar p/ menu principal")
 
-    let input = readInt(":: ")
-
-    if (!validateInput(input)) {
-        println("Erro: Opção inválida.");
-        return index()
-    }
-
-    return input
+    return askToUserWhile(":: ", validateInput, readInt)
 }
 
 function validateInput(input){
-    return IntegerValidate.validate(input) && input > 0 && input < 6
+    if(!IntegerValidate.validate(input) || (input < 1 || input > 5)){
+        throw new Error("Erro: Opção inválida.")
+    }
 }
