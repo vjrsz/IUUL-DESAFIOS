@@ -1,22 +1,22 @@
 export default class {
-    _client
+    _cpf
     _date
     _hourInit
     _hourEnd
 
-    constructor(client, date, hourInit, hourEnd) {
-        this._client = client;
+    constructor(cpf, date, hourInit, hourEnd) {
+        this._cpf = cpf;
         this._date = date;
         this._hourInit = hourInit;
         this._hourEnd = hourEnd;
     }
 
-    get client() {
-        return this._client;
+    get cpf() {
+        return this._cpf;
     }
 
-    set client(value) {
-        this._client = value;
+    set cpf(value) {
+        this._cpf = value;
     }
 
     get date() {

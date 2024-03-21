@@ -19,7 +19,7 @@ export default class{
         let splitDateB = this.splitDate(dateB)
 
         if (splitDateA.year !== splitDateB.year) {
-            return splitDateA.year - splitDateA.year;
+            return splitDateA.year - splitDateB.year;
         } else if (splitDateA.month !== splitDateB.month) {
             return splitDateA.month - splitDateB.month;
         } else {
@@ -47,10 +47,12 @@ export default class{
             dd: date.getDate(),
             mm: date.getMonth() + 1,
             aa: date.getFullYear().toString().slice(-2),
-            yyyy: date.getFullYear()
+            yyyy: date.getFullYear(),
+            hh: date.getHours(),
+            ii: date.getMinutes(),
         }
 
-        return formatText.replace(/dd|mm|aa|yyyy/gi, matched => map[matched])
+        return formatText.replace(/dd|mm|aa|yyyy|hh|ii/gi, matched => map[matched])
     };
 
     static now(format = "dd/mm/yyyy"){
@@ -59,5 +61,31 @@ export default class{
 
     static getMinutesFrom(hour) {
         return parseInt(this.splitHour(hour).minutes);
+    }
+
+    static compareToHour(hourA, hourB = this.now("hh:ii")) {
+        let splitHourA = this.splitHour(hourA)
+        let splitHourB = this.splitHour(hourB)
+
+        if (splitHourA.hour !== splitHourB.hour) {
+            return splitHourA.hour - splitHourB.hour;
+        } else {
+            return splitHourA.minutes - splitHourB.minutes;
+        }
+    }
+
+    static calculateDifferenceHours(hourA, hourB) {
+        let splitHourA = this.splitHour(hourA)
+        let splitHourB = this.splitHour(hourB)
+
+        let diffH = splitHourA.hour - splitHourB.hour
+        let diffM = splitHourA.minutes - splitHourB.minutes
+
+        if(diffM < 0){
+            diffH -= 1
+            diffM -= 60
+        }
+
+        return `${diffH.toString().padStart(2,'0')}:${diffM.toString().padStart(2,'0')}`
     }
 }

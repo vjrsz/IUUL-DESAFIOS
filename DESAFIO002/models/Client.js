@@ -4,11 +4,31 @@ export class Client{
     _name
     _cpf
     _birthdate
+    _schedules
+    _futureScheduling
 
     constructor(name, cpf, birthdate) {
         this._name = name;
         this._cpf = cpf;
         this._birthdate = birthdate;
+        this._schedules = []
+        this._futureScheduling = undefined
+    }
+
+    get futureScheduling() {
+        return this._futureScheduling;
+    }
+
+    set futureScheduling(value) {
+        this._futureScheduling = value;
+    }
+
+    get schedules() {
+        return this._schedules;
+    }
+
+    set schedules(value) {
+        this._schedules = value;
     }
 
     get age(){

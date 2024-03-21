@@ -4,6 +4,7 @@ import Route from "../config/Route.js";
 import SchedulingService from "../services/SchedulingService.js";
 import { destroy } from "../views/schedules/destroy.js";
 import { show } from "../views/schedules/show.js";
+import DateHelper from "../helpers/DateHelper.js";
 
 export default class {
     static index() {
@@ -15,10 +16,14 @@ export default class {
         else if (input === 4) { return Route.redirect("menu@index") }
     }
 
-    static all(request) {
-        show(SchedulingService.all())
+    static all() {
+        let schedules = SchedulingService.all()
 
-        return Route.redirect("schedules@index")
+        schedules.sort((a, b) => DateHelper.compareTo(a.date, b.date))
+
+        show(schedules)
+
+        return Route.redirect("scheduling@index")
     }
 
     static store() {
@@ -26,13 +31,13 @@ export default class {
 
         SchedulingService.store(input.name, input.cpf, input.birthdate)
 
-        return Route.redirect("schedules@index")
+        return Route.redirect("scheduling@index")
     }
     static destroy() {
         let input = destroy()
 
-        SchedulingService.destroy(input.cpf)
+        SchedulingService.destroy(input)
 
-        return Route.redirect("schedules@index")
+        return Route.redirect("scheduling@index")
     }
 }
