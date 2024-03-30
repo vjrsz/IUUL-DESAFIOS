@@ -61,6 +61,7 @@ Projeto referente as atividades passada no Projeto da IUUL.
 
 <ul>
   <li>Desafio 001</li>
+  <li>Desafio 002</li>
 </ul>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -80,7 +81,10 @@ Projeto referente as atividades passada no Projeto da IUUL.
    ```sh
    git clone https://github.com/vjrsz/IUUL-DESAFIOS.git
    ```
-2. Install maven Dependencies
+2. Run
+   ```sh
+   npm install
+   ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -99,7 +103,6 @@ If you want to contribute to this project and add new features, fix bugs or impr
 ## License
 
 This project is licensed under the MIT License - see the <a href="./LICENSE">LICENSE</a> file for details.
-Have fun exploring Calculator in Vue.js! thanks!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
