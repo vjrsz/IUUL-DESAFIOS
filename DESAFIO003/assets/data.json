@@ -1,0 +1,44 @@
+[
+  {
+    "cpf": "78444434051",
+    "dt_nascimento": "15021996",
+    "estado_civil": "S",
+    "nome": "Pedro de Almeida",
+    "renda_mensal": "3584,12"
+  },
+  {
+    "cpf": "70789422050",
+    "dt_nascimento": "28102000",
+    "estado_civil": "S",
+    "nome": "Ana Beatriz",
+    "renda_mensal": "2810,25"
+  },
+  {
+    "cpf": "41719321060",
+    "dt_nascimento": "07051984",
+    "estado_civil": "S",
+    "nome": "Andre Rocha",
+    "renda_mensal": "4110,39"
+  },
+  {
+    "cpf": "30228380006",
+    "dt_nascimento": "04121972",
+    "estado_civil": "C",
+    "nome": "Fernanda Pinheiro",
+    "renda_mensal": "5850,27"
+  },
+  {
+    "cpf": "31777563097",
+    "dt_nascimento": "21071991",
+    "estado_civil": "C",
+    "nome": "Joice Medeiros",
+    "renda_mensal": "10254,48"
+  },
+  {
+    "cpf": "18493838047",
+    "dt_nascimento": "14091966",
+    "estado_civil": "C",
+    "nome": "Carlos Roberto",
+    "renda_mensal": "8387,92"
+  }
+]

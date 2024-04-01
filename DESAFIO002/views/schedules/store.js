@@ -1,4 +1,4 @@
-import {askToUserWhile, print, println, readString} from "./../view.js";
+import {askToUserWhile, println, readString} from "./../view.js";
 import CpfValidate from "../../validations/CpfValidate.js";
 import DateValidate from "../../validations/DateValidate.js";
 import ClientService from "../../services/ClientService.js";
