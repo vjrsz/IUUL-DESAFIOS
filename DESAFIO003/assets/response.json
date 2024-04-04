@@ -1,0 +1,8 @@
+[{"dados": {
+  "_birthdate": "1996-02-15T00:00:00.000-03:00",
+  "_cpf": 78444434051,
+  "_errors": [],
+  "_maritalStatus": "S",
+  "_monthlyIncome": "3584,12",
+  "_name": "Pedro de Almeida"
+},"erros":[]},{"dados":{"_name":"Ana Beatriz","_cpf":70789422050,"_birthdate":"2000-10-28T00:00:00.000-02:00","_monthlyIncome":"2810,25","_maritalStatus":"S","_errors":[]},"erros":[]},{"dados":{"_name":"Andre Rocha","_cpf":41719321060,"_birthdate":"1984-05-07T00:00:00.000-03:00","_monthlyIncome":"4110,39","_maritalStatus":"S","_errors":[]},"erros":[]},{"dados":{"_name":"Fernanda Pinheiro","_cpf":30228380006,"_birthdate":"1972-12-04T00:00:00.000-03:00","_monthlyIncome":"5850,27","_maritalStatus":"C","_errors":[]},"erros":[]},{"dados":{"_name":"Joice Medeiros","_cpf":31777563097,"_birthdate":"1991-07-21T00:00:00.000-03:00","_monthlyIncome":"10254,48","_maritalStatus":"C","_errors":[]},"erros":[]},{"dados":{"_name":"Carlos Roberto","_cpf":18493838047,"_birthdate":"1966-09-14T00:00:00.000-03:00","_monthlyIncome":"8387,92","_maritalStatus":"C","_errors":[]},"erros":[]}]
