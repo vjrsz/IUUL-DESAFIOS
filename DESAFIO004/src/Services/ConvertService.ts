@@ -14,7 +14,7 @@ export class ConvertService {
         })
     });
 
-    _cache:ICache= {
+    _cache: ICache= {
         _codes: undefined,
     }
 
